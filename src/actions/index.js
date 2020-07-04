@@ -22,8 +22,5 @@ export const fetchUserInfo = () => dispatch => {
   dispatch(fetchInfoRequest());
   return fetch('https://my-json-server.typicode.com/kevindongzg/demo/login')
     .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      dispatch(fetchInfoReceive(data));
-    });
+    .then(data => dispatch(fetchInfoReceive(data)));
 };
