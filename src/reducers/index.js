@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import userInfo from './userInfo';
-import fetchInfo from './fetchInfo';
+import fetchUserInfo from './fetchUserInfo';
 
 const reducers = combineReducers({
-  userInfo,
-  fetchInfo
+  fetchUserInfo
 });
 
 export default reducers;

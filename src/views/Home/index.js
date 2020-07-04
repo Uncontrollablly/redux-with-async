@@ -5,7 +5,7 @@ import loginFailed from '../../assets/loginFailed.jpg';
 
 class Home extends Component {
   render() {
-    return this.props.fetchInfo.isFetching ? (
+    return this.props.fetchUserInfo.isFetching ? (
       <h1>Loading...</h1>
     ) : (
       <div className="main-view home">
@@ -35,8 +35,8 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = ({ fetchInfo }) => ({
-  fetchInfo
+const mapStateToProps = ({ fetchUserInfo }) => ({
+  fetchUserInfo
 });
 
 export default connect(mapStateToProps)(Home);
